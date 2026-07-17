@@ -58,6 +58,20 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        "slow-pan": {
+          "0%, 100%": { transform: "scale(1) translate(0px, 0px)" },
+          "50%": { transform: "scale(1.05) translate(-10px, 10px)" },
+        },
+        "float-text": {
+          "0%, 100%": { transform: "translateY(0px)", opacity: "0.8" },
+          "50%": { transform: "translateY(-15px)", opacity: "1", textShadow: "0 0 15px rgba(198,156,59,0.8)" },
+        }
+      },
+      animation: {
+        "slow-pan": "slow-pan 25s ease-in-out infinite alternate",
+        "float-text": "float-text 6s ease-in-out infinite alternate",
+      },
     },
   },
   plugins: [],

@@ -91,7 +91,7 @@ export default function Home() {
         
         {/* Decorative Runway Background Image with Animation */}
         <div 
-          className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat mix-blend-luminosity animate-slow-pan"
+          className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat animate-slow-pan"
           style={{ backgroundImage: "url('/images/runway.png')" }}
         />
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-black via-black/70 to-black" />
