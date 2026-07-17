@@ -19,18 +19,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={inter.className}>
-        <nav className={styles.navbar}>
-          <div className={styles.navContainer}>
-            <Link href="/" className={styles.logo}>
-              EGERIE
-            </Link>
-            <div className={styles.navLinks}>
-              <Link href="/auth" className={styles.navLink}>Connexion</Link>
-              <Link href="/dashboard" className={styles.navLink}>Dashboard</Link>
-            </div>
-          </div>
-        </nav>
-        <main className={styles.mainContent}>
+        <main>
           {children}
         </main>
       </body>

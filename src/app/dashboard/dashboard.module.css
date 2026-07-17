@@ -1,5 +1,5 @@
 .dashboardContainer {
-  padding: 2rem;
+  padding: 3rem 2rem;
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
@@ -9,40 +9,56 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.header h1 {
+  font-weight: 500;
+  color: var(--primary);
+  margin: 0;
 }
 
 .logoutBtn {
   background: transparent;
-  color: var(--error);
-  border: 1px solid var(--error);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s;
+  font-weight: 500;
 }
 
 .logoutBtn:hover {
-  background: rgba(239, 68, 68, 0.1);
+  background: var(--surface);
+  border-color: var(--error);
+  color: var(--error);
 }
 
 .paymentCard {
   animation: fadeIn 0.5s ease-out;
 }
 
+.paymentCard h2 {
+  font-weight: 500;
+  color: var(--primary);
+  margin-top: 0;
+}
+
 .description {
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
 }
 
 .paymentSetup {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .checkoutForm {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .error {
@@ -54,11 +70,12 @@
 .successMessage {
   text-align: center;
   color: var(--success);
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .successMessage h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
