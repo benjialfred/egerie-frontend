@@ -76,39 +76,52 @@ export default function Home() {
       </section>
 
       {/* Value Proposition */}
-      <section className="py-20 px-8 bg-white border-t border-border/40">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
-          <div className="p-8 border border-border/50 bg-[#FCFBF9]/50">
-            <h2 className="text-2xl font-serif text-primary mb-4">Pour les Modèles</h2>
-            <p className="text-muted-foreground font-light mb-6">Boostez votre visibilité dans notre annuaire VIP et postulez en un clic aux castings de Douala et Yaoundé.</p>
-            <ul className="space-y-4 text-sm text-primary font-medium tracking-wide uppercase">
-              <li className="flex items-center gap-3"><span className="text-accent">◆</span> Portfolio Professionnel</li>
-              <li className="flex items-center gap-3"><span className="text-accent">◆</span> Accès aux Castings Privés</li>
-              <li className="flex items-center gap-3"><span className="text-accent">◆</span> Algorithme de Mise en Avant</li>
-            </ul>
+      <section className="py-24 px-8 bg-black border-t border-white/10 relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#C69C3B]/10 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-serif text-white mb-4">Pourquoi rejoindre l'Élite ?</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#C69C3B] to-transparent mx-auto"></div>
           </div>
-          <div className="p-8 border border-border/50 bg-[#FCFBF9]/50">
-            <h2 className="text-2xl font-serif text-primary mb-4">Pour les Organisateurs</h2>
-            <p className="text-muted-foreground font-light mb-6">Trouvez les perles rares de demain grâce à un ciblage ultra-précis par quartier et filtre de mensurations.</p>
-            <ul className="space-y-4 text-sm text-primary font-medium tracking-wide uppercase">
-              <li className="flex items-center gap-3"><span className="text-accent">◆</span> Ciblage Premium (Bonapriso, Akwa)</li>
-              <li className="flex items-center gap-3"><span className="text-accent">◆</span> Gestion Kanban des Candidats</li>
-              <li className="flex items-center gap-3"><span className="text-accent">◆</span> Monétisation des Inscriptions</li>
-            </ul>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
+            {/* Models Card */}
+            <div className="p-10 border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors rounded-2xl group">
+              <h2 className="text-3xl font-serif text-[#C69C3B] mb-4 group-hover:scale-105 transition-transform origin-left">Pour les Modèles</h2>
+              <p className="text-gray-300 font-light mb-8 leading-relaxed">Boostez votre visibilité dans notre annuaire VIP et postulez en un clic aux castings les plus fermés de Douala et Yaoundé.</p>
+              <ul className="space-y-5 text-sm text-white font-medium tracking-wide uppercase">
+                <li className="flex items-center gap-4"><span className="text-[#C69C3B] bg-[#C69C3B]/20 p-2 rounded-full"><Sparkles className="w-4 h-4" /></span> Portfolio Professionnel</li>
+                <li className="flex items-center gap-4"><span className="text-[#C69C3B] bg-[#C69C3B]/20 p-2 rounded-full"><Star className="w-4 h-4" /></span> Accès aux Castings Privés</li>
+                <li className="flex items-center gap-4"><span className="text-[#C69C3B] bg-[#C69C3B]/20 p-2 rounded-full"><Users className="w-4 h-4" /></span> Algorithme de Mise en Avant</li>
+              </ul>
+            </div>
+            
+            {/* Organizers Card */}
+            <div className="p-10 border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors rounded-2xl group">
+              <h2 className="text-3xl font-serif text-[#C69C3B] mb-4 group-hover:scale-105 transition-transform origin-left">Pour les Organisateurs</h2>
+              <p className="text-gray-300 font-light mb-8 leading-relaxed">Trouvez les perles rares de demain grâce à un ciblage ultra-précis par quartier et filtre de mensurations.</p>
+              <ul className="space-y-5 text-sm text-white font-medium tracking-wide uppercase">
+                <li className="flex items-center gap-4"><span className="text-[#C69C3B] bg-[#C69C3B]/20 p-2 rounded-full"><ShieldCheck className="w-4 h-4" /></span> Ciblage Premium (Bonapriso, Bastos...)</li>
+                <li className="flex items-center gap-4"><span className="text-[#C69C3B] bg-[#C69C3B]/20 p-2 rounded-full"><Users className="w-4 h-4" /></span> Gestion Kanban Avancée</li>
+                <li className="flex items-center gap-4"><span className="text-[#C69C3B] bg-[#C69C3B]/20 p-2 rounded-full"><Star className="w-4 h-4" /></span> Monétisation des Votes en Ligne</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Feed VIP */}
-      <section className="py-20 px-8 bg-[#FCFBF9] border-t border-border/40">
+      <section className="py-24 px-8 bg-[#0a0a0a] border-t border-white/10">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
             <div>
-              <h2 className="text-3xl font-serif text-primary mb-2">Castings Exclusifs</h2>
-              <p className="text-muted-foreground font-light">Opportunités à la une cette semaine.</p>
+              <h2 className="text-4xl font-serif text-white mb-2">Castings Exclusifs</h2>
+              <p className="text-[#C69C3B] font-light tracking-widest uppercase text-sm">Opportunités à la une cette semaine.</p>
             </div>
             <Link href="/auth">
-              <Button variant="link" className="text-accent hover:text-accent/80 p-0 font-medium uppercase tracking-wide">Découvrir l'annuaire &rarr;</Button>
+              <Button variant="link" className="text-white hover:text-[#C69C3B] p-0 font-medium uppercase tracking-widest flex items-center gap-2">Découvrir l'annuaire <ArrowRight className="w-4 h-4" /></Button>
             </Link>
           </div>
 
@@ -118,18 +131,20 @@ export default function Home() {
               { title: "Élection Miss Littoral", location: "Douala - Akwa", date: "22 Nov 2026", type: "Public" },
               { title: "Égérie Marque Luxe", location: "Yaoundé - Bastos", date: "05 Dec 2026", type: "Ciblage Premium" }
             ].map((casting, i) => (
-              <Card key={i} className="rounded-none border-border/60 hover:shadow-xl hover:border-accent/40 transition-all duration-300 bg-white">
-                <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start mb-4">
-                    <Badge variant={casting.type === "Ciblage Premium" ? "gold" : "outline"} className="rounded-none text-[10px] tracking-widest uppercase px-2 py-1">
+              <Card key={i} className="rounded-2xl border-white/10 hover:shadow-[0_0_30px_rgba(198,156,59,0.15)] hover:border-[#C69C3B]/50 transition-all duration-500 bg-black overflow-hidden group">
+                <CardHeader className="pb-4 relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <Badge variant="outline" className={`rounded-full text-[10px] tracking-widest uppercase px-3 py-1 ${casting.type === "Ciblage Premium" ? "border-[#C69C3B] text-[#C69C3B]" : "border-white/30 text-gray-300"}`}>
                       {casting.type}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl font-serif text-primary">{casting.title}</CardTitle>
-                  <CardDescription className="font-light mt-2">{casting.location}</CardDescription>
+                  <CardTitle className="text-2xl font-serif text-white group-hover:text-[#C69C3B] transition-colors">{casting.title}</CardTitle>
+                  <CardDescription className="font-light mt-2 text-gray-400 flex items-center gap-2">
+                    <Star className="w-3 h-3 text-[#C69C3B]" /> {casting.location}
+                  </CardDescription>
                 </CardHeader>
                 <CardFooter>
-                  <Button variant="outline" className="w-full rounded-none border-primary/20 text-primary hover:bg-primary hover:text-white transition-colors">Postuler</Button>
+                  <Button variant="outline" className="w-full rounded-full border-white/20 text-white hover:bg-[#C69C3B] hover:border-[#C69C3B] hover:text-black transition-all tracking-widest uppercase text-xs h-12">Postuler Maintenant</Button>
                 </CardFooter>
               </Card>
             ))}
