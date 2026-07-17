@@ -9,16 +9,25 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section Premium */}
       <section className="relative flex-1 flex flex-col items-center justify-center text-center px-4 py-32 overflow-hidden bg-black">
-        {/* Background Image with Overlay */}
+        {/* Background Image with Overlay and Animation */}
         <div 
-          className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80')" }}
+          className="absolute inset-0 z-0 opacity-70 bg-cover bg-[center_top_20%] bg-no-repeat animate-slow-pan"
+          style={{ backgroundImage: "url('/images/hero-bg.png')" }}
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-black/30 to-black/80" />
         <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/80 via-transparent to-black/80" />
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+          
+          {/* Floating Strong Messages */}
+          <div className="absolute -left-20 top-0 hidden xl:block">
+            <p className="text-[#E2C779] font-serif text-2xl rotate-[-15deg] opacity-70 animate-float-text" style={{ animationDelay: '0s' }}>L'Excellence Africaine</p>
+          </div>
+          <div className="absolute -right-20 top-20 hidden xl:block">
+            <p className="text-white font-serif text-2xl rotate-[10deg] opacity-70 animate-float-text" style={{ animationDelay: '2s' }}>Beauté Sans Frontières</p>
+          </div>
+
           <Badge variant="outline" className="mb-8 py-1.5 px-6 text-xs font-medium tracking-[0.2em] rounded-full border-[#C69C3B]/50 text-[#C69C3B] bg-black/50 backdrop-blur-md uppercase flex items-center gap-2 shadow-[0_0_15px_rgba(198,156,59,0.2)]">
             <Sparkles className="w-3 h-3" />
             L'Élite du Mannequinat Africain
@@ -79,9 +88,22 @@ export default function Home() {
       <section className="py-24 px-8 bg-black border-t border-white/10 relative overflow-hidden">
         {/* Subtle background glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#C69C3B]/10 blur-[120px] rounded-full pointer-events-none" />
+        
+        {/* Decorative Runway Background Image with Animation */}
+        <div 
+          className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat mix-blend-luminosity animate-slow-pan"
+          style={{ backgroundImage: "url('/images/runway.png')" }}
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black via-black/70 to-black" />
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
+          
+          {/* Floating Strong Message for Runway */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-32 hidden md:block w-full text-center pointer-events-none">
+             <p className="text-[#C69C3B] font-serif text-3xl opacity-30 animate-float-text tracking-[0.5em] uppercase">Brillez sur le Podium</p>
+          </div>
+
+          <div className="text-center mb-16 relative z-10">
             <h2 className="text-3xl md:text-5xl font-serif text-white mb-4">Pourquoi rejoindre l'Élite ?</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#C69C3B] to-transparent mx-auto"></div>
           </div>

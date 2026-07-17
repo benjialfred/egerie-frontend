@@ -100,3 +100,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes slow-pan {
+  0% { transform: scale(1) translate(0px, 0px); }
+  50% { transform: scale(1.1) translate(-10px, 10px); }
+  100% { transform: scale(1) translate(0px, 0px); }
+}
+
+@keyframes float-text {
+  0% { transform: translateY(0px); opacity: 0.8; }
+  50% { transform: translateY(-15px); opacity: 1; text-shadow: 0 0 15px rgba(198,156,59,0.8); }
+  100% { transform: translateY(0px); opacity: 0.8; }
+}
+
+.animate-slow-pan {
+  animation: slow-pan 25s ease-in-out infinite alternate;
+}
+
+.animate-float-text {
+  animation: float-text 6s ease-in-out infinite alternate;
+}
