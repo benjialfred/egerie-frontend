@@ -1,0 +1,68 @@
+.dashboardContainer {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.logoutBtn {
+  background: transparent;
+  color: var(--error);
+  border: 1px solid var(--error);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.paymentCard {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.description {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.paymentSetup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkoutForm {
+  margin-top: 1rem;
+}
+
+.error {
+  color: var(--error);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.successMessage {
+  text-align: center;
+  color: var(--success);
+  padding: 2rem;
+}
+
+.successMessage h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
